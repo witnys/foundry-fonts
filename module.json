@@ -2,18 +2,17 @@
   "id": "foundry-fonts",
   "title": "Foundry Fonts",
   "description": "Customize your Foundry VTT interface with Google Fonts. Easily replace any interface font with your favorite Google Fonts.",
+  "authors": [
+    {
+    "name": "Evuna"
+    }
+  ],
   "version": "0.0.1",
   "compatibility": {
     "minimum": "10",
     "verified": "12",
     "maximum": "12"
   },
-  "authors": [
-    {
-      "name": "evuna",
-      "url": "https://github.com/witnys"
-    }
-  ],
   "esmodules": [
     "scripts/module.js"
   ],
