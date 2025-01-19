@@ -1,0 +1,41 @@
+// styles/module.css
+.google-fonts-settings .form-group {
+    margin: 1em 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.google-fonts-settings .form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.google-fonts-settings .form-fields {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1em;
+    align-items: center;
+}
+
+.google-fonts-settings input[type="text"] {
+    width: 100%;
+}
+
+.google-fonts-settings .font-preview {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+}
+
+.google-fonts-settings .fallback-input {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.google-fonts-settings button[type="submit"] {
+    margin-top: 1em;
+    width: 100%;
+}
