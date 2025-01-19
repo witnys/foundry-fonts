@@ -2,7 +2,7 @@
 {
   "id": "foundry-google-fonts",
   "title": "Foundry Google Fonts",
-  "description": "Replace Foundry VTT fonts with Google Fonts",
+  "description": "Customize your Foundry VTT interface with Google Fonts. Easily replace any interface font with your favorite Google Fonts.",
   "version": "0.0.1",
   "compatibility": {
     "minimum": "10",
@@ -11,12 +11,12 @@
   },
   "authors": [
     {
-      "name": "evuna"
+      "name": "evuna",
+      "url": "https://github.com/witnys"
     }
   ],
   "esmodules": [
-    "scripts/module.js",
-    "scripts/settings.js"
+    "scripts/module.js"
   ],
   "styles": [
     "styles/module.css"
@@ -25,168 +25,15 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "languages/en.json"
+      "path": "lang/en.json"
     }
   ],
-  "socket": false,
-  "protected": false
-}
-
-// scripts/module.js
-class GoogleFontsModule {
-  static ID = 'foundry-google-fonts';
-  
-  static SETTINGS = {
-    ENABLED_FONTS: 'enabled-fonts',
-    GOOGLE_FONTS_LIST: 'google-fonts-list'
-  }
-
-  static async init() {
-    // Register module settings
-    game.settings.register(this.ID, this.SETTINGS.ENABLED_FONTS, {
-      name: 'Enabled Font Replacements',
-      hint: 'Configure which fonts to replace with Google Fonts',
-      scope: 'world',
-      config: false,
-      type: Object,
-      default: {}
-    });
-
-    // Add settings button to module settings
-    game.settings.registerMenu(this.ID, 'fontSettings', {
-      name: 'Font Settings',
-      label: 'Configure Fonts',
-      icon: 'fas fa-font',
-      type: GoogleFontsSettings,
-      restricted: true
-    });
-
-    // Initialize font replacements
-    await this.initializeFonts();
-  }
-
-  static async initializeFonts() {
-    const enabledFonts = game.settings.get(this.ID, this.SETTINGS.ENABLED_FONTS);
-    
-    // Construct Google Fonts URL
-    const fonts = Object.values(enabledFonts).filter(f => f.enabled && f.googleFont);
-    if (fonts.length === 0) return;
-
-    const googleFontsUrl = this.constructGoogleFontsUrl(fonts);
-    
-    // Load Google Fonts
-    await this.loadGoogleFonts(googleFontsUrl);
-    
-    // Apply CSS replacements
-    this.applyFontReplacements(enabledFonts);
-  }
-
-  static constructGoogleFontsUrl(fonts) {
-    const familyParam = fonts
-      .map(f => f.googleFont.replace(' ', '+'))
-      .join('|');
-    return `https://fonts.googleapis.com/css2?family=${familyParam}&display=swap`;
-  }
-
-  static async loadGoogleFonts(url) {
-    const link = document.createElement('link');
-    link.href = url;
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-    
-    // Wait for fonts to load
-    await document.fonts.ready;
-  }
-
-  static applyFontReplacements(enabledFonts) {
-    const style = document.createElement('style');
-    
-    const css = Object.entries(enabledFonts)
-      .filter(([_, config]) => config.enabled && config.googleFont)
-      .map(([selector, config]) => `
-        ${selector} {
-          font-family: "${config.googleFont}", ${config.fallback || 'sans-serif'} !important;
-        }
-      `)
-      .join('\n');
-
-    style.textContent = css;
-    document.head.appendChild(style);
-  }
-}
-
-// Register module
-Hooks.once('init', () => {
-  GoogleFontsModule.init();
-});
-
-// scripts/settings.js
-class GoogleFontsSettings extends FormApplication {
-  static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      title: 'Google Fonts Settings',
-      id: 'google-fonts-settings',
-      template: `modules/${GoogleFontsModule.ID}/templates/settings.html`,
-      width: 600,
-      height: 'auto'
-    });
-  }
-
-  getData() {
-    const enabledFonts = game.settings.get(GoogleFontsModule.ID, GoogleFontsModule.SETTINGS.ENABLED_FONTS);
-    
-    return {
-      fonts: enabledFonts,
-      defaultSelectors: [
-        { selector: '.window-title', name: 'Window Titles' },
-        { selector: '.dialog .dialog-content', name: 'Dialog Content' },
-        { selector: '.chat-message .message-header', name: 'Chat Headers' },
-        { selector: '.chat-message .message-content', name: 'Chat Content' }
-      ]
-    };
-  }
-
-  async _updateObject(event, formData) {
-    const enabledFonts = expandObject(formData);
-    await game.settings.set(GoogleFontsModule.ID, GoogleFontsModule.SETTINGS.ENABLED_FONTS, enabledFonts);
-    // Reload fonts
-    await GoogleFontsModule.initializeFonts();
-  }
-}
-
-// templates/settings.html
-<form>
-  {{#each defaultSelectors}}
-  <div class="form-group">
-    <label>{{this.name}}</label>
-    <div class="form-fields">
-      <input type="text" name="{{this.selector}}.googleFont" placeholder="Enter Google Font name"
-        value="{{lookup (lookup ../fonts this.selector) 'googleFont'}}">
-      <label>
-        <input type="checkbox" name="{{this.selector}}.enabled"
-          {{#if (lookup (lookup ../fonts this.selector) 'enabled')}}checked{{/if}}>
-        Enable
-      </label>
-    </div>
-  </div>
-  {{/each}}
-  
-  <button type="submit">
-    <i class="fas fa-save"></i> Save Changes
-  </button>
-</form>
-
-// styles/module.css
-.google-fonts-settings .form-group {
-  margin-bottom: 1em;
-}
-
-.google-fonts-settings .form-fields {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-
-.google-fonts-settings input[type="text"] {
-  flex: 1;
+  "url": "https://github.com/yourusername/foundry-google-fonts",
+  "manifest": "https://raw.githubusercontent.com/yourusername/foundry-google-fonts/main/module.json",
+  "download": "https://github.com/yourusername/foundry-google-fonts/releases/download/1.0.0/foundry-google-fonts.zip",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": "https://github.com/yourusername/foundry-google-fonts/issues",
+  "changelog": "CHANGELOG.md",
+  "socket": false
 }
