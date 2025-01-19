@@ -33,7 +33,7 @@
   "download": "https://github.com/witnys/foundry-fonts/releases/download/0.0.1/foundry-google-fonts.zip",
   "license": "MIT",
   "readme": "README.md",
-  "bugs": "https://github.com/yourusername/foundry-google-fonts/issues",
+  "bugs": "https://github.com/witnys/foundry-google-fonts/issues",
   "changelog": "CHANGELOG.md",
   "socket": false
 }
