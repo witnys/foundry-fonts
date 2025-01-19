@@ -1,4 +1,4 @@
-# Foundry Google Fonts
+# Foundry Fonts
 
 A Foundry VTT module that allows you to replace any interface font with Google Fonts.
 
