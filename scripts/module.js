@@ -1,6 +1,6 @@
 // scripts/module.js
 class GoogleFontsConfig {
-    static ID = 'foundry-google-fonts';
+    static ID = 'foundry-fonts';
     static SETTINGS = {
         FONTS: 'font-settings'
     };
