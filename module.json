@@ -1,6 +1,6 @@
 // module.json
 {
-  "id": "foundry-google-fonts",
+  "id": "foundry-fonts",
   "title": "Foundry Google Fonts",
   "description": "Customize your Foundry VTT interface with Google Fonts. Easily replace any interface font with your favorite Google Fonts.",
   "version": "0.0.1",
@@ -28,9 +28,9 @@
       "path": "lang/en.json"
     }
   ],
-  "url": "https://github.com/yourusername/foundry-google-fonts",
-  "manifest": "https://raw.githubusercontent.com/yourusername/foundry-google-fonts/main/module.json",
-  "download": "https://github.com/yourusername/foundry-google-fonts/releases/download/1.0.0/foundry-google-fonts.zip",
+  "url": "https://github.com/witnys/foundry-google-fonts",
+  "manifest": "https://raw.githubusercontent.com/witnys/foundry-fonts/main/module.json",
+  "download": "https://github.com/witnys/foundry-fonts/releases/download/0.0.1/foundry-google-fonts.zip",
   "license": "MIT",
   "readme": "README.md",
   "bugs": "https://github.com/yourusername/foundry-google-fonts/issues",
