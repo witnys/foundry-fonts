@@ -16,7 +16,7 @@ A Foundry VTT module that allows you to replace any interface font with Google F
 2. Click "Install Module"
 3. Paste the following URL in the "Manifest URL" field:
 ```
-https://raw.githubusercontent.com/yourusername/foundry-google-fonts/main/module.json
+https://raw.githubusercontent.com/witnys/foundry-fonts/refs/heads/main/module.json
 ```
 
 ## Usage
