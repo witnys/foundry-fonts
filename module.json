@@ -7,11 +7,11 @@
     "name": "Evuna"
     }
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": {
     "minimum": "10",
     "verified": "12",
-    "maximum": "12"
+    "maximum": "12.9.99"
   },
   "esmodules": [
     "scripts/module.js"
@@ -28,7 +28,7 @@
   ],
   "url": "https://github.com/witnys/foundry-fonts",
   "manifest": "https://raw.githubusercontent.com/witnys/foundry-fonts/main/module.json",
-  "download": "https://github.com/witnys/foundry-fonts/releases/download/v0.0.1/module.zip",
+  "download": "https://github.com/witnys/foundry-fonts/releases/download/v0.0.2/module.zip",
   "license": "MIT",
   "readme": "README.md",
   "bugs": "https://github.com/witnys/foundry-fonts/issues",
