@@ -2,7 +2,7 @@
   "id": "foundry-fonts",
   "title": "Foundry Fonts",
   "description": "Customize your Foundry VTT interface with Google Fonts. Easily replace any interface font with your favorite Google Fonts.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "compatibility": {
     "minimum": "10",
     "verified": "12",
@@ -27,12 +27,9 @@
       "path": "lang/en.json"
     }
   ],
-  "url": "https://github.com/witnys/foundry-fonts",
+  "socket": true,
+    "url": "https://github.com/witnys/foundry-fonts",
   "manifest": "https://raw.githubusercontent.com/witnys/foundry-fonts/main/module.json",
-  "download": "https://github.com/witnys/foundry-fonts/releases/download/v0.0.3/module.zip",
-  "license": "MIT",
+  "download": "https://github.com/witnys/foundry-fonts/releases/download/v0.0.4/module.zip",
   "readme": "README.md",
-  "bugs": "https://github.com/witnys/foundry-fonts/issues",
-  "changelog": "CHANGELOG.md",
-  "socket": false
 }
