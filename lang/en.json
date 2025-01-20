@@ -1,0 +1,22 @@
+{
+    "FOUNDRYFONT": {
+        "Settings": {
+            "Enable": "Enable Custom Fonts",
+            "EnableHint": "Enable or disable custom font replacements",
+            "DefaultFont": "Default Interface Font",
+            "DefaultFontHint": "Choose the default font for the Foundry interface",
+            "HeadingFont": "Heading Font",
+            "HeadingFontHint": "Choose the font for headings and titles",
+            "BodyFont": "Body Text Font",
+            "BodyFontHint": "Choose the font for regular text content",
+            "ApplyChanges": "Apply Font Changes",
+            "ResetDefaults": "Reset to Default Fonts"
+        },
+        "Notifications": {
+            "FontsLoaded": "Custom fonts loaded successfully",
+            "FontLoadError": "Error loading custom fonts",
+            "SettingsSaved": "Font settings saved",
+            "SettingsReset": "Font settings reset to defaults"
+        }
+    }
+}
